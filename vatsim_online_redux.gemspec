@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["alex@flightleveltech.co.nz"]
   gem.description   = %q{Updated version of original gem by Svilen Vassilev. Selectively pulls and parses Vatsim online stations data. Essentially it's a 'who's online' library, capable of displaying online ATC and/or pilots for given airports, areas or globally. Stations are returned as objects, exposing a rich set of attributes. Vatsim data is pulled on preset intervals and cached locally to avoid flooding the servers.}
   gem.summary       = %q{Updated version of original gem by Svilen Vassilev. Selectively pulls and parses Vatsim online stations data. Essentially it's a 'who's online' library, capable of displaying online ATC and/or pilots for given airports, areas or globally. Stations are returned as objects, exposing a rich set of attributes. Vatsim data is pulled on preset intervals and cached locally to avoid flooding the servers.}
-  gem.homepage      = "https://github.com/tarakanbg/vatsim_online"
+  gem.homepage      = "https://github.com/aldent95/vatsim_online_redux"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
