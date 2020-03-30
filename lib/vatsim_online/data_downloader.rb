@@ -24,9 +24,6 @@ require 'fileutils'
       request = Net::HTTP::Get.new(uri.path)
       data = http.request(request).body.gsub("\n", '')
       create_status_backup if File.exists?(LOCAL_STATUS)
-      status = Tempfile.new('vatsim_status')
-      status.close
-      File.rename status.path, LOCAL_STATUS
       File.write(LOCAL_STATUS, data)
       File.chmod(0777, LOCAL_STATUS)
       dummy_status if data.include? "<html><head>"
@@ -72,9 +69,6 @@ require 'fileutils'
       request = Net::HTTP::Get.new(uri.path)
       req_data = http.request(request).body
       create_data_backup if File.exists?(LOCAL_DATA)
-      data = Tempfile.new('vatsim_data', :encoding => 'utf-8')
-      data.close
-      File.rename data.path, LOCAL_DATA
       data = req_data.gsub(/["]/, '\s').encode!('UTF-16', 'UTF-8', :invalid => :replace, :replace => '').encode!('UTF-8', 'UTF-16')
       data = data.slice(0..(data.index('!PREFILE:')))
       File.open(LOCAL_DATA, "w+") {|f| f.write(data)}
@@ -97,7 +91,6 @@ require 'fileutils'
     def read_local_datafile
       data = File.open(LOCAL_DATA)
       difference = Time.diff(data.ctime, Time.now)[:minute]
-      difference > 2 ? create_local_data_file : data.read
       if difference > 2
         d = create_local_data_file
       else
