@@ -1,0 +1,796 @@
+{
+  "general": {
+    "version": 3,
+    "reload": 1,
+    "update": "20210129214112",
+    "update_timestamp": "2021-01-29T21:41:12.581473Z",
+    "connected_clients": 1580,
+    "unique_users": 1494
+  },
+  "pilots": [
+    {
+      "cid": 1443199,
+      "name": "Colin Ray EGSS",
+      "callsign": "VFE1625",
+      "server": "GERMANY-1",
+      "pilot_rating": 0,
+      "latitude": 50.69043,
+      "longitude": 5.15406,
+      "altitude": 35669,
+      "groundspeed": 386,
+      "transponder": "4654",
+      "heading": 303,
+      "qnh_i_hg": 29.59,
+      "qnh_mb": 1002,
+      "flight_plan": {
+        "flight_rules": "I",
+        "aircraft": "B738/L",
+        "departure": "LOWS",
+        "arrival": "EGBB",
+        "alternate": "EGLL",
+        "cruise_tas": "364",
+        "altitude": "36000",
+        "deptime": "2010",
+        "enroute_time": "0210",
+        "fuel_time": "0331",
+        "remarks": "PBN/A1B1C1D1S1S2 DOF/210129 REG/N806SB EET/LOVV0000 EDMM0004 EDGG0033 EBUR0059 EHAA0118 EBUR0119 EGTT0127 OPR/VFE PER/C RMK/TCAS SIMBRIEF  WWW.UKVIRTUAL.CO.UK /V/",
+        "route": "TRAUN2A/33 TRAUN L856 KPT L608 KUNOD LIRSU DENUT L610 HEMEL HEME1B "
+      },
+      "logon_time": "2021-01-29T19:11:12.8784266Z",
+      "last_updated": "2021-01-29T21:41:08.6518392Z"
+    },
+    {
+      "cid": 1484856,
+      "name": "Walias Garcia LEMD",
+      "callsign": "VFE2157",
+      "server": "GERMANY-1",
+      "pilot_rating": 0,
+      "latitude": 11.28617,
+      "longitude": -84.90521,
+      "altitude": 34844,
+      "groundspeed": 469,
+      "transponder": "2000",
+      "heading": 125,
+      "qnh_i_hg": 29.76,
+      "qnh_mb": 1008,
+      "flight_plan": {
+        "flight_rules": "I",
+        "aircraft": "H/B738/G",
+        "departure": "MHTG",
+        "arrival": "SKRG",
+        "alternate": "SKBO",
+        "cruise_tas": "510",
+        "altitude": "35000",
+        "deptime": "0000",
+        "enroute_time": "0000",
+        "fuel_time": "0000",
+        "remarks": "AIR CHILD VIRTUAL AIRLINES                             OPR/ONEWORLDVIRTUAL                                       OPR/STARALLIANCE VIRTUAL                                 OPR/SKYTEAMVIRTUAL                                          UPSVAC                                                                     VRYR                                                                         YOUTUBE  FLO SIAMÉS TWITCH.TV/FLOSIAMES                     BUFFALO AIRWAYS VA                                            SOUTHWEST VIRTUAL AIRLINES /T/",
+        "route": "LIBIS1 LIBIS UA502 MGA UA317 TBG UA323 RNG DCT"
+      },
+      "logon_time": "2021-01-29T19:11:12.8800312Z",
+      "last_updated": "2021-01-29T21:41:08.7028646Z"
+    },
+    {
+      "cid": 1153349,
+      "name": "Richard Eloy Zepf CYYZ",
+      "callsign": "DAL2136",
+      "server": "SINGAPORE",
+      "pilot_rating": 0,
+      "latitude": 45.77765,
+      "longitude": -111.15607,
+      "altitude": 4481,
+      "groundspeed": 17,
+      "transponder": "1332",
+      "heading": 316,
+      "qnh_i_hg": 29.58,
+      "qnh_mb": 1002,
+      "flight_plan": {
+        "flight_rules": "I",
+        "aircraft": "MD88/L",
+        "departure": "KMSP",
+        "arrival": "KBZN",
+        "alternate": "KIDA",
+        "cruise_tas": "458",
+        "altitude": "32000",
+        "deptime": "1913",
+        "enroute_time": "0218",
+        "fuel_time": "0402",
+        "remarks": "COOL RUNNINGS.// DELTAVA.ORG/  TRACKING LIVE FLIGHT// /V/",
+        "route": "SMERF7 SMERF SWTHN BIL BZN"
+      },
+      "logon_time": "2021-01-29T19:11:12.881493Z",
+      "last_updated": "2021-01-29T21:41:10.4213156Z"
+    },
+    {
+      "cid": 1025689,
+      "name": "Pablo Capolupo SABE",
+      "callsign": "ARG1458",
+      "server": "CANADA",
+      "pilot_rating": 0,
+      "latitude": -24.84479,
+      "longitude": -65.47918,
+      "altitude": 4083,
+      "groundspeed": 0,
+      "transponder": "1546",
+      "heading": 68,
+      "qnh_i_hg": 29.91,
+      "qnh_mb": 1013,
+      "flight_plan": {
+        "flight_rules": "I",
+        "aircraft": "B737",
+        "departure": "SABE",
+        "arrival": "SASA",
+        "alternate": "SANT",
+        "cruise_tas": "452",
+        "altitude": "36000",
+        "deptime": "1910",
+        "enroute_time": "0158",
+        "fuel_time": "0319",
+        "remarks": "OPR/AEROLINEASVIRTUAL.COM.AR PIC/ARG1860 PBN/A1B1C1D1S1S2 REG/LVBZA EET/SACF0041  OPR/ARG PER/C  RMK/TCAS) /V/ SEL/ABCF",
+        "route": "BIVAM3B BIVAM UW8 ERE UT672 DADMI UT677 ILPAR"
+      },
+      "logon_time": "2021-01-29T19:11:12.8825866Z",
+      "last_updated": "2021-01-29T21:41:11.5014007Z"
+    },
+    {
+      "cid": 869293,
+      "name": "Nikos Kantas LGTT",
+      "callsign": "SX6PL",
+      "server": "GERMANY-1",
+      "pilot_rating": 0,
+      "latitude": 49.07397,
+      "longitude": 20.23332,
+      "altitude": 2308,
+      "groundspeed": 11,
+      "transponder": "1000",
+      "heading": 101,
+      "qnh_i_hg": 29.29,
+      "qnh_mb": 992,
+      "flight_plan": {
+        "flight_rules": "I",
+        "aircraft": "B60T/G",
+        "departure": "LFBD",
+        "arrival": "LZTT",
+        "alternate": "LZSL",
+        "cruise_tas": "310",
+        "altitude": "33000",
+        "deptime": "1830",
+        "enroute_time": "0320",
+        "fuel_time": "0430",
+        "remarks": " /V/",
+        "route": "SAU V14 MEN UN871 MEZIN G53 LUXAN UN871 LTP N871 OMASI UN871 MOLUS N871 DITON T163 ZUE J51 BODAN Z601 KPT L856 ATLOL N871 BEPAS T709 BODAL L726 BNO T303 MAKAL P27 UMARY"
+      },
+      "logon_time": "2021-01-29T19:11:12.9745931Z",
+      "last_updated": "2021-01-29T21:41:11.8376085Z"
+    },
+    {
+      "cid": 1422541,
+      "name": "TARIF SUCA VABB",
+      "callsign": "AIC187",
+      "server": "GERMANY-1",
+      "pilot_rating": 0,
+      "latitude": 50.18995,
+      "longitude": -76.44464,
+      "altitude": 36235,
+      "groundspeed": 463,
+      "transponder": "4223",
+      "heading": 205,
+      "qnh_i_hg": 30.15,
+      "qnh_mb": 1021,
+      "flight_plan": {
+        "flight_rules": "I",
+        "aircraft": "H/B77W/L",
+        "departure": "VIDP",
+        "arrival": "CYYZ",
+        "alternate": "CYTR",
+        "cruise_tas": "489",
+        "altitude": "28000",
+        "deptime": "2200",
+        "enroute_time": "1351",
+        "fuel_time": "1604",
+        "remarks": "PBN/A1B1C1D1L1O1S2 DOF/201206 REG/VTALU EET/OPLR0034 OAKX0114 UTSD0151 UTTR0213 UAII0219 UACN0300 USSV0400 UUYY0503 ULAA0544 ULMM0616 ENOB0655 BGGL0752 CZEG1034 CZQX1039 CZUL1041 CZYZ1308 OPR/AI PER/E RALT/BIKF CYYR RMK/TCAS SIMBRIEF /V/ SEL/FLHM",
+        "route": "BUTOP5B BUTOP M875 SAJAN/N0499F300 M875 AMDAR/K0906F300 M741 ETUMU IDSAN A359 ASLOK/K0824F240 A777 RITAL/K0895F300 M741 LAMGI A777 KST/K0813F240 R482 LANOR/K0889F300 R482 LBN URILI UHT/K0909F320 ANEPA LIMUS/N0492F320 7322E 7409E/M086F340 7410N 7230N 7040N HB MUSVA/N0490F340 FEDDY YTQ/N0502F360 YFM YVO IMEBA IMEBA5"
+      },
+      "logon_time": "2021-01-29T19:11:12.9778908Z",
+      "last_updated": "2021-01-29T21:41:10.8920544Z"
+    },
+    {
+      "cid": 1497772,
+      "name": "Yasir Mehmood EGLL",
+      "callsign": "PIA741D",
+      "server": "UK-1",
+      "pilot_rating": 0,
+      "latitude": 21.95475,
+      "longitude": 39.71396,
+      "altitude": 8802,
+      "groundspeed": 257,
+      "transponder": "1200",
+      "heading": 223,
+      "qnh_i_hg": 30.08,
+      "qnh_mb": 1019,
+      "flight_plan": {
+        "flight_rules": "I",
+        "aircraft": "B77W",
+        "departure": "OPIS",
+        "arrival": "OEJN",
+        "alternate": "OETF",
+        "cruise_tas": "489",
+        "altitude": "36000",
+        "deptime": "1610",
+        "enroute_time": "0519",
+        "fuel_time": "0644",
+        "remarks": "PBN/A1B1C1D1L1O1S2 DOF/210129 REG/APBID EET/OPKR0050 OIIX0134 OBBB0305 OEJD0321 OPR/PIA PER/D RMK/TCAS SIMBRIEF  /V/",
+        "route": "DAMTO1L DAMTO Z304 ZB G325 PG G665 ASVIB N312 SERDU/N0490F370 Z350 LVA/N0487F380 A453 KAPIP N312 MIDSI A453 SOLOB L768 ULADA T136 EMUSA Q212 KIA M309 VEMEM VEMEM1Q"
+      },
+      "logon_time": "2021-01-29T19:11:12.9809782Z",
+      "last_updated": "2021-01-29T21:41:08.4888377Z"
+    },
+    {
+      "cid": 1136828,
+      "name": "Devin Caliri KMSP",
+      "callsign": "NWA864",
+      "server": "USA-EAST",
+      "pilot_rating": 1,
+      "latitude": 64.6475,
+      "longitude": -147.68444,
+      "altitude": 14607,
+      "groundspeed": 225,
+      "transponder": "2200",
+      "heading": 249,
+      "qnh_i_hg": 29.48,
+      "qnh_mb": 998,
+      "flight_plan": {
+        "flight_rules": "I",
+        "aircraft": "B752/M-SDE3FHIM3RW/LB1",
+        "departure": "KMSP",
+        "arrival": "PAFA",
+        "alternate": "PAEI",
+        "cruise_tas": "459",
+        "altitude": "34000",
+        "deptime": "1550",
+        "enroute_time": "0528",
+        "fuel_time": "0659",
+        "remarks": "PBN/A1B3B4B5C4D4O4 DOF/210129 REG/N537SB EET/CZWG0111 CZEG0209 PAZA0445 OPR/NWA PER/D RMK/TCAS SIMBRIEF /V/",
+        "route": "KBREW1 FAR KP21A VLN YPE 57N120W 60N130W YXY J515 RDFLG HRDNG2"
+      },
+      "logon_time": "2021-01-29T19:11:13.0719836Z",
+      "last_updated": "2021-01-29T21:41:11.0234711Z"
+    },
+    {
+      "cid": 1379490,
+      "name": "Michel Matalon LSZH",
+      "callsign": "AFR352",
+      "server": "GERMANY-1",
+      "pilot_rating": 0,
+      "latitude": 44.99953,
+      "longitude": 9.47403,
+      "altitude": 37729,
+      "groundspeed": 425,
+      "transponder": "4107",
+      "heading": 300,
+      "qnh_i_hg": 29.64,
+      "qnh_mb": 1004,
+      "flight_plan": {
+        "flight_rules": "I",
+        "aircraft": "H/A359/L",
+        "departure": "EDUU",
+        "arrival": "LSGG",
+        "alternate": "LSZH",
+        "cruise_tas": "490",
+        "altitude": "38000",
+        "deptime": "1830",
+        "enroute_time": "0318",
+        "fuel_time": "0720",
+        "remarks": "PBN/A1B1C1D1L1O1S1 NAV/RNVD1E2A1 DOF/210129 REG/FHPJZ  EET/LGGG0032 LIBB0201 LIRR0247 LIMM0251  LFMM0333 RVR/75 PER/D  /V/",
+        "route": "PHA DCT EVENO UM601 RDS UL995 KRK UL53 OLGAT DCT NUCRE DCT PERAV DCT RUPAX DCT SUTOB DCT ERLIT DCT OTNUN DCT LOGDI DCT BOTAL DCT AOSTA L615 BANKO"
+      },
+      "logon_time": "2021-01-29T19:11:13.0739096Z",
+      "last_updated": "2021-01-29T21:41:08.3404289Z"
+    }
+  ],
+  "controllers": [
+    {
+      "cid": 1454201,
+      "name": "Sebastian Wilke",
+      "callsign": "EDUU_W_CTR",
+      "frequency": "133.650",
+      "facility": 6,
+      "rating": 4,
+      "server": "GERMANY-1",
+      "visual_range": 300,
+      "text_atis": [
+        "RHEIN RADAR - CPDLC EDUW",
+        "COVERING ABOVE FL245 ONLY!",
+        "CHARTS AND FURTHER INFORMATION AT WWW.VATSIM-GERMANY.ORG"
+      ],
+      "last_updated": "2021-01-29T21:41:08.0928733Z",
+      "logon_time": "2021-01-29T19:11:12.9744237Z"
+    },
+    {
+      "cid": 1489535,
+      "name": "Pavel Sergienko",
+      "callsign": "UMMS_R_APP",
+      "frequency": "125.250",
+      "facility": 5,
+      "rating": 3,
+      "server": "GERMANY-2",
+      "visual_range": 100,
+      "text_atis": [
+        "MINSK RADAR, GOOD DAY",
+        "WELCOME TO BELARUS!",
+        "JOIN OUR DISCORD CHANNEL HERE ;) VATS.IM/MINSK-FIR-DISCORD"
+      ],
+      "last_updated": "2021-01-29T21:40:59.5378132Z",
+      "logon_time": "2021-01-29T19:11:13.0906448Z"
+    },
+    {
+      "cid": 1302911,
+      "name": "Maxim Redlinger",
+      "callsign": "EDBB_U_APP",
+      "frequency": "121.120",
+      "facility": 5,
+      "rating": 5,
+      "server": "GERMANY-1",
+      "visual_range": 123,
+      "text_atis": [
+        "BERLIN DIRECTOR",
+        "ON INTIAL CONTACT, STATE YOUR CALLSIGN ONLY"
+      ],
+      "last_updated": "2021-01-29T21:40:48.8642889Z",
+      "logon_time": "2021-01-29T19:11:13.2762054Z"
+    },
+    {
+      "cid": 1373921,
+      "name": "Nikolas Goerlitz",
+      "callsign": "EDGG_E_CTR",
+      "frequency": "127.720",
+      "facility": 6,
+      "rating": 5,
+      "server": "GERMANY-1",
+      "visual_range": 200,
+      "text_atis": [
+        "LANGEN RADAR - CPDLC EDGE",
+        "COVERING EDDF/EDDS/EDFH/EDSB/EDDR",
+        "CHARTS AND FURTHER INFORMATION AT WWW.VATSIM-GERMANY.ORG"
+      ],
+      "last_updated": "2021-01-29T21:40:54.8406666Z",
+      "logon_time": "2021-01-29T19:11:13.3787693Z"
+    },
+    {
+      "cid": 1464533,
+      "name": "Marcus Kannicht",
+      "callsign": "EDGG_U_APP",
+      "frequency": "118.500",
+      "facility": 5,
+      "rating": 3,
+      "server": "GERMANY-1",
+      "visual_range": 100,
+      "text_atis": [
+        "FRANKFURT DIRECTOR",
+        "CALLSIGN ONLY ON INITIAL CALL, TURN IMMEDIATELY WHEN INSTRUCTED",
+        "CHARTS AND FURTHER INFORMATION AT WWW.VATSIM-GERMANY.ORG"
+      ],
+      "last_updated": "2021-01-29T21:40:52.9208287Z",
+      "logon_time": "2021-01-29T19:11:13.5833241Z"
+    },
+    {
+      "cid": 1343255,
+      "name": "Daniel Button",
+      "callsign": "EGAC_APP",
+      "frequency": "130.850",
+      "facility": 5,
+      "rating": 5,
+      "server": "UK-1",
+      "visual_range": 100,
+      "text_atis": [
+        "BELFAST RADAR",
+        "ATIS AVAILABLE ON 124.575"
+      ],
+      "last_updated": "2021-01-29T22:08:08.8181168Z",
+      "logon_time": "2021-01-29T19:11:14.4846565Z"
+    }
+  ],
+  "atis": [
+    {
+      "cid": 1338316,
+      "name": "Elijah Whitaker",
+      "callsign": "KIAH_ATIS",
+      "frequency": "124.050",
+      "facility": 4,
+      "rating": 4,
+      "server": "USA-EAST",
+      "visual_range": 50,
+      "atis_code": "R",
+      "text_atis": [
+        "KIAH ATIS INFO R 2053Z. 13012KT 10SM SCT037 BKN250 18/09 A3020"
+      ],
+      "last_updated": "2021-01-29T21:41:09.2864076Z",
+      "logon_time": "2021-01-29T19:11:12.8832768Z"
+    },
+    {
+      "cid": 1458917,
+      "name": "Bence Takacs",
+      "callsign": "CYYZ_ATIS",
+      "frequency": "120.820",
+      "facility": 4,
+      "rating": 3,
+      "server": "USA-EAST",
+      "visual_range": 0,
+      "atis_code": "H",
+      "text_atis": [
+        "CYYZ INFORMATION H WEATHER AT 2100Z , WIND 340 AT 4 ,",
+        "VISIBILITY 12 , 4000 BROKEN TEMPERATURE -8 DEW POINT -13 ,",
+        "ALTIMETER 3028 , APPROACH ILS RUNWAY 05 , DEPARTURE RUNWAY 06L",
+        ", ADVISE ATC THAT YOU HAVE INFORMATION H ."
+      ],
+      "last_updated": "2021-01-29T21:41:11.5554464Z",
+      "logon_time": "2021-01-29T19:11:13.4884084Z"
+    },
+    {
+      "cid": 1476945,
+      "name": "Ben",
+      "callsign": "EDDH_ATIS",
+      "frequency": "124.320",
+      "facility": 4,
+      "rating": 2,
+      "server": "GERMANY-1",
+      "visual_range": 0,
+      "atis_code": "R",
+      "text_atis": [
+        "HAMBURG INFORMATION R MET REPORT TIME 2120",
+        "EXPECT ILS APPROACH RUNWAY 05 RUNWAYS IN USE 05",
+        "FOR LANDING 33 FOR TAKE OFF SURFACE CONDITION RUNWAY 05",
+        "COVERED WITH WET SNOW 25 TO 50 PERCENT IN DEPTH 3 MM",
+        "FRICTION COEFFICIENT GOOD RUNWAY 33 COVERED WITH WET SNOW",
+        "MORE THAN 50 PERCENT IN DEPTH 12 MM FRICTION COEFFICIENT POOR",
+        "TRL 70 WHEN PASSING 2000 FEET 119.525 WIND 050 DEGREES 9",
+        "KNOTS VISIBILITY 4200 METERS LIGHT SNOW CLOUDS FEW",
+        "700 FEET SCATTERED 1800 FEET BROKEN 2600 FEET TEMPERATURE -1",
+        "DEW POINT -2 QNH 998 TREND TEMPORARY VISIBILITY 5",
+        "KILOMETERS CLOUDS BROKEN 700 FEET INFORMATION R OUT",
+        ""
+      ],
+      "last_updated": "2021-01-29T21:41:08.5764759Z",
+      "logon_time": "2021-01-29T19:11:14.2844417Z"
+    },
+    {
+      "cid": 1489535,
+      "name": "Pavel Sergienko",
+      "callsign": "UMMS_ATIS",
+      "frequency": "128.850",
+      "facility": 4,
+      "rating": 3,
+      "server": "GERMANY-2",
+      "visual_range": 0,
+      "atis_code": "Q",
+      "text_atis": [
+        "MINSK ATIS INFORMATION Q 2100 EXPECT ILS APPROACH RUNWAY 31R",
+        "COMPACTED SNOW FRICTION COEFFICIENT 0 POINT 43 DEPARTURE RUNWAY",
+        "31R COMPACTED SNOW FRICTION COEFFICIENT 0 POINT 43 TRANSITION",
+        "LEVEL 80 APRON AND TAXIWAYS ARE SLIPPERY TAXI WITH CAUTION",
+        "RUNWAYS 13R 31L CLOSED WIND VARIABLE BETWEEN 240 AND 310 DEGREES",
+        "5 GUSTS 8 METRES PER SECOND VISIBILITY GREATER THEN 10",
+        "KILOMETRES CLOUDS OVERCAST 300 METRES TEMPERATURE MINUS 4 DEW",
+        "POINT MINUS 5 QNH 990 HECTOPASCALS NO SIGNIFICANT CHANGE WELCOME",
+        "TO THE CAPITAL OF BELARUS! PLEASE DAWNLOAD ACTUAL SCENERY FROM",
+        "HTTP //VATS.IM/MINSK ACKNOWLEDGE INFORMATION Q"
+      ],
+      "last_updated": "2021-01-29T21:40:59.5376784Z",
+      "logon_time": "2021-01-29T19:11:15.1780675Z"
+    },
+    {
+      "cid": 1013673,
+      "name": "Florian",
+      "callsign": "EDDP_ATIS",
+      "frequency": "123.950",
+      "facility": 4,
+      "rating": 5,
+      "server": "GERMANY-1",
+      "visual_range": 0,
+      "atis_code": "T",
+      "text_atis": [
+        "LEIPZIG HALLE INFORMATION T MET REPORT TIME 2120",
+        "EXPECT ILS APPROACH RUNWAY 08L OR RUNWAY 08R",
+        "RUNWAYS IN USE 08L AND 08R TRANSITION LEVEL 70",
+        "SURFACE CONDITION RUNWAY 08L WET DEPOSITS MORE THAN 50 PERCENT",
+        "IN DEPTH 3 MM RUNWAY 08R WET DEPOSITS MORE THAN 50 PERCENT",
+        "IN DEPTH 1 MM FRICTION COEFFICIENT GOOD GOOD AND GOOD WIND",
+        "VARIABLE 1 KNOTS VISIBILITY 3500 METERS MIST",
+        "CLOUDS FEW 300 FEET BROKEN 2300 FEET TEMPERATURE 0",
+        "DEW POINT 0 QNH 994 HPA TREND BECOMING VISIBILITY 5",
+        "KILOMETERS INFORMATION T OUT"
+      ],
+      "last_updated": "2021-01-29T21:41:01.9048579Z",
+      "logon_time": "2021-01-29T19:11:15.7851184Z"
+    }
+  ],
+  "servers": [
+    {
+      "ident": "UK-1",
+      "hostname_or_ip": "209.97.177.84",
+      "location": "London, UK",
+      "name": "UK-1",
+      "clients_connection_allowed": 1
+    },
+    {
+      "ident": "GERMANY-1",
+      "hostname_or_ip": "157.230.25.177",
+      "location": "Frankfurt, Germany",
+      "name": "GERMANY-1",
+      "clients_connection_allowed": 1
+    },
+    {
+      "ident": "GERMANY-2",
+      "hostname_or_ip": "157.230.17.198",
+      "location": "Frankfurt, Germany",
+      "name": "GERMANY-2",
+      "clients_connection_allowed": 1
+    },
+    {
+      "ident": "USA-EAST",
+      "hostname_or_ip": "134.209.67.219",
+      "location": "New York, USA",
+      "name": "USA-EAST",
+      "clients_connection_allowed": 1
+    },
+    {
+      "ident": "USA-WEST",
+      "hostname_or_ip": "165.22.163.56",
+      "location": "San Francisco, USA",
+      "name": "USA-WEST",
+      "clients_connection_allowed": 1
+    },
+    {
+      "ident": "SINGAPORE",
+      "hostname_or_ip": "68.183.185.148",
+      "location": "Singapore",
+      "name": "SINGAPORE",
+      "clients_connection_allowed": 1
+    },
+    {
+      "ident": "CANADA",
+      "hostname_or_ip": "165.22.239.218",
+      "location": "Toronto, Canada",
+      "name": "CANADA",
+      "clients_connection_allowed": 1
+    }
+  ],
+  "prefiles": [
+    {
+      "cid": 1482780,
+      "name": "Anton Chambers",
+      "callsign": "DHL722",
+      "flight_plan": {
+        "flight_rules": "I",
+        "aircraft": "B738/L",
+        "departure": "KATL",
+        "arrival": "KJFK",
+        "alternate": "KBOS",
+        "cruise_tas": "455",
+        "altitude": "37000",
+        "deptime": "1630",
+        "enroute_time": "0150",
+        "fuel_time": "0326",
+        "remarks": "PBN/A1B1C1D1S1S2 DOF/210129 REG/N806SB EET/KZDC0036 KZNY0135 OPR/DHL PER/C RMK/TCAS SIMBRIEF /V/",
+        "route": "PHIIL2 GRD Q64 TYI J209 ORF J121 SIE CAMRN4"
+      },
+      "last_updated": "2021-01-29T19:11:16.5924412Z"
+    },
+    {
+      "cid": 1448015,
+      "name": "Jorge Massiah",
+      "callsign": "AAL205",
+      "flight_plan": {
+        "flight_rules": "I",
+        "aircraft": "B739/M-SDE2E3FGHIRWXY/LB1",
+        "departure": "MDPC",
+        "arrival": "KATL",
+        "alternate": "KBNA",
+        "cruise_tas": "473",
+        "altitude": "32000",
+        "deptime": "2015",
+        "enroute_time": "0332",
+        "fuel_time": "0508",
+        "remarks": "PBN/A1B1C1D1S1S2 DOF/210129 REG/N922SB EET/KZMA0033 KZJX0223 KZTL0300 OPR/AAL PER/D RMK/TCAS SIMBRIEF /V/",
+        "route": "PIXAR2W PIXAR UA636 PTA UW38 JUELE BR2L PVN L463 BRRGO/N0470F340 BR1L ZFP BR62V TRV DCT EBAYY Q93 DEBRL/N0468F350 Q93 PRMUS/N0470F340 Q89 SHRKS Q77 TEUFL DCT TYFTR JJEDI2"
+      },
+      "last_updated": "2021-01-29T19:47:46.6717107Z"
+    },
+    {
+      "cid": 822688,
+      "name": "EVAGELINOS GIANNIS",
+      "callsign": "AEEE903",
+      "flight_plan": {
+        "flight_rules": "I",
+        "aircraft": "B738/X",
+        "departure": "LGKR",
+        "arrival": "LFMN",
+        "alternate": "LFML",
+        "cruise_tas": "432",
+        "altitude": "30000",
+        "deptime": "2010",
+        "enroute_time": "0203",
+        "fuel_time": "0339",
+        "remarks": "+VFPS+/V/PBN/A1B1C1D1L1O1S1 NAV/RNVD1E2A1 DOF/210129 REG/SXBNA EET/LIBB0012 LIRR0040 LFFF0134 LFMM0149 RVR/200 PER/C ",
+        "route": "TIGRA L995 KAPPO M603 PNZ M729 ELB M616 DOBIM UM616 AKUTI R16 KERIT"
+      },
+      "last_updated": "2021-01-29T19:49:23.2649873Z"
+    },
+    {
+      "cid": 1174795,
+      "name": "Calum MacDonald",
+      "callsign": "AUA785B",
+      "flight_plan": {
+        "flight_rules": "I",
+        "aircraft": "E195/M-SDE2E3FGIRWY/S",
+        "departure": "LOWW",
+        "arrival": "LRSB",
+        "alternate": "LOWW",
+        "cruise_tas": "447",
+        "altitude": "33000",
+        "deptime": "2020",
+        "enroute_time": "0055",
+        "fuel_time": "0318",
+        "remarks": "PBN/A1B1D1S1S2 DOF/210129 REG/OELWN EET/LHCC0008 LZBB0009 LHCC0014 LRBB0032 OPR/AUA PER/C RVR/200 RMK/VIRTUAL AUSTRIAN CSN/AUSTRIAN /V/",
+        "route": "ADAMA Z648 VEDER L140 ALAMU DCT EPARI DCT IBINU"
+      },
+      "last_updated": "2021-01-29T19:50:42.0758969Z"
+    },
+    {
+      "cid": 1463036,
+      "name": "jake massey",
+      "callsign": "EIN53WT",
+      "flight_plan": {
+        "flight_rules": "I",
+        "aircraft": "A320/L",
+        "departure": "EIDW",
+        "arrival": "EGCC",
+        "alternate": "EGGP",
+        "cruise_tas": "460",
+        "altitude": "230",
+        "deptime": "0020",
+        "enroute_time": "0035",
+        "fuel_time": "0200",
+        "remarks": "+VFPS+/V/EIDW 291930Z 08008KT 9999 -DZ FEW004 BKN006 BKN012 06/05 Q1000 TEMPO         BKN010EGCC 291920Z AUTO 33005KT 4900 RADZ SCT005 BKN009 OVC012 06/06 Q1001",
+        "route": "10/ LIFY2E LIFFY Q37 MALUD MIRS2B 23R/ "
+      },
+      "last_updated": "2021-01-29T19:51:23.2932557Z"
+    }
+  ],
+  "facilities": [
+    {
+      "id": 0,
+      "short": "OBS",
+      "long": "Observer"
+    },
+    {
+      "id": 1,
+      "short": "FSS",
+      "long": "Flight Service Station"
+    },
+    {
+      "id": 2,
+      "short": "DEL",
+      "long": "Clearance Delivery"
+    },
+    {
+      "id": 3,
+      "short": "GND",
+      "long": "Ground"
+    },
+    {
+      "id": 4,
+      "short": "TWR",
+      "long": "Tower"
+    },
+    {
+      "id": 5,
+      "short": "APP",
+      "long": "Approach/Departure"
+    },
+    {
+      "id": 6,
+      "short": "CTR",
+      "long": "Enroute"
+    }
+  ],
+  "ratings": [
+    {
+      "id": -1,
+      "short": "INAC",
+      "long": "Inactive"
+    },
+    {
+      "id": 0,
+      "short": "SUS",
+      "long": "Suspended"
+    },
+    {
+      "id": 1,
+      "short": "OBS",
+      "long": "Observer"
+    },
+    {
+      "id": 2,
+      "short": "S1",
+      "long": "Tower Trainee"
+    },
+    {
+      "id": 3,
+      "short": "S2",
+      "long": "Tower Controller"
+    },
+    {
+      "id": 4,
+      "short": "S3",
+      "long": "Senior Student"
+    },
+    {
+      "id": 5,
+      "short": "C1",
+      "long": "Enroute Controller"
+    },
+    {
+      "id": 6,
+      "short": "C2",
+      "long": "Controller 2 (not in use)"
+    },
+    {
+      "id": 7,
+      "short": "C3",
+      "long": "Senior Controller"
+    },
+    {
+      "id": 8,
+      "short": "I1",
+      "long": "Instructor"
+    },
+    {
+      "id": 9,
+      "short": "I2",
+      "long": "Instructor 2 (not in use)"
+    },
+    {
+      "id": 10,
+      "short": "I3",
+      "long": "Senior Instructor"
+    },
+    {
+      "id": 11,
+      "short": "SUP",
+      "long": "Supervisor"
+    },
+    {
+      "id": 12,
+      "short": "ADM",
+      "long": "Administrator"
+    }
+  ],
+  "pilot_ratings": [
+    {
+      "id": 0,
+      "short_name": "NEW",
+      "long_name": "Basic Member"
+    },
+    {
+      "id": 1,
+      "short_name": "PPL",
+      "long_name": "Private Pilot Licence"
+    },
+    {
+      "id": 3,
+      "short_name": "IR",
+      "long_name": "Instrument Rating"
+    },
+    {
+      "id": 7,
+      "short_name": "CMEL",
+      "long_name": "Commercial Multi-Engine License"
+    },
+    {
+      "id": 15,
+      "short_name": "ATPL",
+      "long_name": "Airline Transport Pilot License"
+    }
+  ]
+}

@@ -6,12 +6,12 @@ require 'net/http'
 require 'fileutils'
   class DataDownloader
 
-    STATUS_URL = "http://status.vatsim.net/status.txt"
+    STATUS_URL = "http://status.vatsim.net/status.json"
     TEMP_DIR = "#{Dir.tmpdir}/vatsim_online"
-    LOCAL_STATUS = "#{Dir.tmpdir}/vatsim_online/vatsim_status.txt"
-    LOCAL_STATUS_BAK = "#{Dir.tmpdir}/vatsim_online/vatsim_status_bak.txt"
-    LOCAL_DATA = "#{Dir.tmpdir}/vatsim_online/vatsim_data.txt"
-    LOCAL_DATA_BAK = "#{Dir.tmpdir}/vatsim_online/vatsim_data_bak.txt"
+    LOCAL_STATUS = "#{Dir.tmpdir}/vatsim_online/vatsim_status.json"
+    LOCAL_STATUS_BAK = "#{Dir.tmpdir}/vatsim_online/vatsim_status_bak.json"
+    LOCAL_DATA = "#{Dir.tmpdir}/vatsim_online/vatsim_data.json"
+    LOCAL_DATA_BAK = "#{Dir.tmpdir}/vatsim_online/vatsim_data_bak.json"
 
     def initialize
       FileUtils.mkdir(TEMP_DIR) unless File.exist? TEMP_DIR
@@ -28,6 +28,9 @@ require 'fileutils'
       File.chmod(0777, LOCAL_STATUS)
       dummy_status if data.include? "<html><head>"
     rescue Exception => e
+      if e.class == WebMock::NetConnectNotAllowedError
+        raise e
+      end
       dummy_status
     end
 
@@ -56,11 +59,9 @@ require 'fileutils'
     end
 
     def servers
-      urls = []
-      CSV.foreach(status_file, :col_sep =>'=') do |row|
-        urls << row[1] if row[0] == "url0"
-      end
-      urls
+      raw_data = File.read(status_file)
+      data = JSON.parse(raw_data)
+      data['data']['v3']
     end
 
     def create_local_data_file
@@ -69,15 +70,16 @@ require 'fileutils'
       request = Net::HTTP::Get.new(uri.path)
       req_data = http.request(request).body
       create_data_backup if File.exists?(LOCAL_DATA)
-      data = req_data.gsub(/["]/, '\s').encode!('UTF-16', 'UTF-8', :invalid => :replace, :replace => '').encode!('UTF-8', 'UTF-16')
-      data = data.slice(0..(data.index('!PREFILE:')))
-      File.open(LOCAL_DATA, "w+") {|f| f.write(data)}
+      File.open(LOCAL_DATA, "w+") {|f| f.write(req_data)}
       File.chmod(0777, LOCAL_DATA)
       gem_data_file if req_data.include? "<html><head>"
       file = File.open(LOCAL_DATA)
       gem_data_file if file.size == 0
       file.close
     rescue Exception => e
+      if e.class == WebMock::NetConnectNotAllowedError
+        raise e
+      end
       gem_data_file
     end
 

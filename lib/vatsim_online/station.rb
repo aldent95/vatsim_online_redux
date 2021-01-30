@@ -12,27 +12,44 @@ module VatsimTools
 
     def initialize(station, args = nil)
 
-      @callsign, @cid,  @name, @role, @frequency, @latitude, @longitude,  @altitude, @groundspeed, @aircraft, @origin,
-        @planned_altitude, @destination, @transponder, @facility, @flight_type, @remarks, @route, @logon, @heading,
-        @qnh_in, @qnh_mb = station[0], station[1], station[2], station[3], station[4], station[5], station[6], station[7],
-        station[8], station[9], station[11], station[12], station[13], station[17], station[18], station[21], station[29],
-        station[30], station[37], station[38], station[39], station[40]
+      @callsign = station['callsign']
+      @cid = station['cid'].to_s
+      @name = station['name']
+      @role = station['role']
+      @frequency = station['frequency']
+      @latitude = station['latitude'].to_s
+      @longitude = station['longitude'].to_s
+      @altitude = station['altitude']
+      @groundspeed = station['groundspeed']
+      @aircraft = station['flight_plan']['aircraft'] rescue ''
+      @origin = station['flight_plan']['departure'] rescue ''
+      @planned_altitude = station['flight_plan']['altitude'] rescue ''
+      @destination = station['flight_plan']['arrival'] rescue ''
+      @transponder = station['transponder']
+      @facility = station['facility'].to_s
+      @flight_type = station['flight_plan']['flight_rules'] rescue ''
+      @remarks = station['flight_plan']['remarks'] rescue ''
+      @route  = station['flight_plan']['route'] rescue ''
+      @logon = station['logon_time']
+      @heading = station['heading'].to_s
+      @qnh_in = station['qnh_i_hg'].to_s
+      @qnh_mb = station['qnh_mb'].to_s
 
-      @atis = atis_cleaner(station[35]) if station[35]
-      @rating = humanized_rating(station[16])
-      @latitude_humanized = latitude_parser(station[5].to_f)
-      @longitude_humanized = longitude_parser(station[6].to_f)
+      @atis = atis_cleaner(station['text_atis']) if station['text_atis']
+      @rating = humanized_rating(station['rating'].to_s)
+      @latitude_humanized = latitude_parser(station['latitude'])
+      @longitude_humanized = longitude_parser(station['longitude'])
       @online_since = utc_logon_time if @logon
       @gcmap_width = args[:gcmap_width].to_i if args && args[:gcmap_width]
       @gcmap_height = args[:gcmap_height].to_i if args && args[:gcmap_height]
       @gcmap = gcmap_generator
-      @atis_message = construct_atis_message(station[35]) if station[35]
+      @atis_message = construct_atis_message(station['text_atis']) if station['text_atis']
     end
 
   private
 
     def gcmap_generator
-      return "No map for ATC stations" if @role != "PILOT"
+      return "No map for ATC stations" if @role != "pilot"
       construct_gcmap_url.gcmap(:width => @gcmap_width, :height => @gcmap_height)
     end
 
@@ -47,22 +64,26 @@ module VatsimTools
       route
     end
 
-    def latitude_parser(lat)
+    def latitude_parser(lat_s)
+      return nil if lat_s == nil
+      lat = lat_s.to_f
       lat > 0 ? hemisphere = "N" : hemisphere = "S"
       hemisphere + lat.abs.to_s
     end
 
-    def longitude_parser(lon)
+    def longitude_parser(lon_s)
+      return nil if lon_s == nil
+      lon = lon_s.to_f
       lon > 0 ? hemisphere = "E" : hemisphere = "W"
       hemisphere + lon.abs.to_s
     end
 
     def atis_cleaner(raw_atis)
-      raw_atis.gsub(/[\^]/, '. ')
+      raw_atis.join(' ').gsub(/[\^]/, '. ')
     end
 
     def utc_logon_time
-      Time.parse ("#{@logon[0...4]}-#{@logon[4...6]}-#{@logon[6...8]} #{@logon[8...10]}:#{@logon[10...12]}:#{@logon[12...14]} UTC")
+      Time.parse(@logon)
     end
 
     def humanized_rating(rating_number)
@@ -84,7 +105,7 @@ module VatsimTools
     end
 
     def construct_atis_message(raw_atis)
-      message = raw_atis.gsub(/[\^]/, '<br />')
+      message = raw_atis.join(' ').gsub(/[\^]/, '<br />')
       message.index('>') ? message = message[message.index('>')+1...message.length] : message = "No published remark"
     end
 

@@ -9,7 +9,7 @@ module VatsimTools
     attributes = %w{role callsign gcmap_width gcmap_height}
     attributes.each {|attribute| attr_accessor attribute.to_sym }
 
-    LOCAL_DATA = "#{Dir.tmpdir}/vatsim_online/vatsim_data.txt"
+    LOCAL_DATA = "#{Dir.tmpdir}/vatsim_online/vatsim_data.json"
 
     def initialize(callsign, args = nil)
       VatsimTools::DataDownloader.new
@@ -29,15 +29,21 @@ module VatsimTools
 
 
     def stations
-      stations = []
-      CSV.foreach(LOCAL_DATA, :col_sep =>':') do |row|
-        callsign, origin, destination, client = row[0].to_s, row[11].to_s, row[13].to_s, row[3].to_s
-        for cs in @callsign
-          stations << row if callsign[0...cs.length] == cs # && client == "ATC") unless @role == "pilot"
+      matching_stations = []
+      raw_data = File.read(LOCAL_DATA)
+      data = JSON.parse(raw_data)
+      pilots = data['pilots'].each {|p| p['role'] = 'pilot'}
+      controllers = data['controllers'].each {|p| p['role'] = 'controller'}
+      atis = data['atis'].each {|p| p['role'] = 'atis'}
+      stations = pilots + controllers + atis
+      stations.each do |station|
+        callsign = station['callsign']
+        @callsign.each do |cs|
+          matching_stations << station if callsign[0...cs.length] == cs # && client == "ATC") unless @role == "pilot"
           # stations << row if (origin[0...icao.length] == icao || destination[0...icao.length] == icao) unless @role == "atc"
         end
       end
-      stations
+      matching_stations
     end
 
     def station_objects

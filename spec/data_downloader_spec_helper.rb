@@ -1,8 +1,10 @@
 def delete_local_files
-  if File.exists?(LOCAL_STATUS)
-    File.delete(LOCAL_STATUS)
+  local_Status = "#{Dir.tmpdir}/vatsim_online/vatsim_status.json"
+  lOCAL_DATA = "#{Dir.tmpdir}/vatsim_online/vatsim_data.json"
+  if File.exists?(local_Status)
+    File.delete(local_Status)
   end
-  if File.exists?(LOCAL_DATA)
-    File.delete(LOCAL_DATA)
+  if File.exists?(lOCAL_DATA)
+    File.delete(lOCAL_DATA)
   end
 end

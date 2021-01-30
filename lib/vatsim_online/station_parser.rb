@@ -7,9 +7,9 @@ module VatsimTools
     require_relative "station"
 
     attributes = %w{role icao excluded gcmap_width gcmap_height}
-    attributes.each {|attribute| attr_accessor attribute.to_sym }
+    attributes.each { |attribute| attr_accessor attribute.to_sym }
 
-    LOCAL_DATA = "#{Dir.tmpdir}/vatsim_online/vatsim_data.txt"
+    LOCAL_DATA = "#{Dir.tmpdir}/vatsim_online/vatsim_data.json"
 
     def initialize(icao, args = nil)
       VatsimTools::DataDownloader.new
@@ -17,7 +17,7 @@ module VatsimTools
       if icao == "ALL"
         @icao = nil
       else
-        @icao = icao.upcase.split(',').each {|s| s.strip!}
+        @icao = icao.upcase.split(',').each { |s| s.strip! }
       end
       @excluded = args[:exclude].upcase if args && args[:exclude]
       @gcmap_width = args[:gcmap_width] if args && args[:gcmap_width]
@@ -32,44 +32,53 @@ module VatsimTools
     end
 
     def stations
-      stations = []
-      CSV.foreach(LOCAL_DATA, :col_sep =>':') do |row|
-        callsign, origin, destination, client = row[0].to_s, row[11].to_s, row[13].to_s, row[3].to_s
+      matching_stations = []
+      raw_data = File.read(LOCAL_DATA)
+      data = JSON.parse(raw_data)
+      pilots = data['pilots'].each { |p| p['role'] = 'pilot' }
+      controllers = data['controllers'].each { |p| p['role'] = 'controller' }
+      atis = data['atis'].each { |p| p['role'] = 'atis' }
+      stations = pilots + controllers + atis
+      stations.each do |station|
+        callsign = station['callsign']
+        destination = station['flight_plan']['arrival'] rescue ''
+        origin = station['flight_plan']['departure'] rescue ''
+        client = station['role']
         unless @icao
-          stations << row if (client == "ATC") unless @role == "pilot"
-          stations << row if (client == "PILOT") unless @role == "atc"
+          matching_stations << station if (client == "controller") unless @role == "pilot"
+          matching_stations << station if (client == "pilot") unless @role == "atc"
         else
-          for icao in @icao
-            stations << row if (callsign[0...icao.length] == icao && client == "ATC") unless @role == "pilot"
-            stations << row if (origin[0...icao.length] == icao || destination[0...icao.length] == icao) unless @role == "atc"
+          @icao.each do |icao|
+            matching_stations << station if (callsign[0...icao.length] == icao && client == "controller") unless @role == "pilot"
+            matching_stations << station if (origin[0...icao.length] == icao || destination[0...icao.length] == icao) unless @role == "atc"
           end
         end
       end
-      stations
+      matching_stations
     end
 
     def station_objects
-      station_objects= []
+      station_objects = []
       args = {}
       args[:gcmap_width] = @gcmap_width if @gcmap_width
       args[:gcmap_height] = @gcmap_height if @gcmap_height
-      stations.each {|station| station_objects << VatsimTools::Station.new(station, args) }
+      stations.each { |station| station_objects << VatsimTools::Station.new(station, args) }
       station_objects
     end
 
     def sorted_station_objects
       atc = []; pilots = []; arrivals = []; departures = []
-      station_objects.each {|sobj| sobj.role == "ATC" ? atc << sobj : pilots << sobj}
+      station_objects.each { |sobj| sobj.role == "controller" ? atc << sobj : pilots << sobj }
       if @icao
-        for icao in @icao
-          for pilot in pilots
+        @icao.each do |icao|
+          pilots.each do |pilot|
             departures << pilot if pilot.origin[0...icao.length] == icao
             arrivals << pilot if pilot.destination[0...icao.length] == icao
           end
         end
       end
-      atc.delete_if {|a| @excluded && a.callsign[0...@excluded.length] == @excluded }
-      {:atc => atc, :pilots => pilots, :arrivals => arrivals, :departures => departures}
+      atc.delete_if { |a| @excluded && a.callsign[0...@excluded.length] == @excluded }
+      { :atc => atc, :pilots => pilots, :arrivals => arrivals, :departures => departures }
     end
 
   end
