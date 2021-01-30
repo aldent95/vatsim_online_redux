@@ -7,9 +7,9 @@ describe VatsimTools::CallsignParser do
 
   before(:each) do
     delete_local_files
-    stub_request(:get, 'http://status.vatsim.net/status.json').
+    stub_request(:get, 'https://status.vatsim.net/status.json').
       to_return(body: File.read(File.join(File.dirname(__FILE__),  'support', 'vatsim_status.json')), status: :ok)
-    stub_request(:get, 'http://data.vatsim.net:443/v3/vatsim-data.json').
+    stub_request(:get, 'https://data.vatsim.net/v3/vatsim-data.json').
       to_return(body: File.read(File.join(File.dirname(__FILE__), 'support', 'vatsim_data.json')), status: :ok)
   end
 

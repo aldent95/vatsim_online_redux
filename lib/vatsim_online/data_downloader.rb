@@ -6,7 +6,7 @@ require 'net/http'
 require 'fileutils'
   class DataDownloader
 
-    STATUS_URL = "http://status.vatsim.net/status.json"
+    STATUS_URL = "https://status.vatsim.net/status.json"
     TEMP_DIR = "#{Dir.tmpdir}/vatsim_online"
     LOCAL_STATUS = "#{Dir.tmpdir}/vatsim_online/vatsim_status.json"
     LOCAL_STATUS_BAK = "#{Dir.tmpdir}/vatsim_online/vatsim_status_bak.json"
@@ -22,6 +22,7 @@ require 'fileutils'
       uri = URI(STATUS_URL)
       http = Net::HTTP.new(uri.host, uri.port)
       request = Net::HTTP::Get.new(uri.path)
+      http.use_ssl = (uri.scheme == 'https')
       data = http.request(request).body.gsub("\n", '')
       create_status_backup if File.exists?(LOCAL_STATUS)
       File.write(LOCAL_STATUS, data)
@@ -68,9 +69,10 @@ require 'fileutils'
       uri = URI(servers.sample)
       http = Net::HTTP.new(uri.host, uri.port)
       request = Net::HTTP::Get.new(uri.path)
+      http.use_ssl = (uri.scheme == 'https')
       req_data = http.request(request).body
       create_data_backup if File.exists?(LOCAL_DATA)
-      File.open(LOCAL_DATA, "w+") {|f| f.write(req_data)}
+      File.open(LOCAL_DATA, "w+") {|f| f.write(req_data.force_encoding('UTF-8'))}
       File.chmod(0777, LOCAL_DATA)
       gem_data_file if req_data.include? "<html><head>"
       file = File.open(LOCAL_DATA)
