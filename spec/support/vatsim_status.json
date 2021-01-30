@@ -1,0 +1,13 @@
+{
+  "data": {
+    "v3": [
+      "https://data.vatsim.net/v3/vatsim-data.json"
+    ]
+  },
+  "user": [
+    "https://stats.vatsim.net/search_id.php"
+  ],
+  "metar": [
+    "http://metar.vatsim.net/metar.php"
+  ]
+}

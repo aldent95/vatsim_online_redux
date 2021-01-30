@@ -1,4 +1,5 @@
 require 'bundler/setup'
+require 'webmock/rspec'
 Bundler.setup
 
 require 'vatsim_online'

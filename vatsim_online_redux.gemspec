@@ -20,6 +20,7 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency "rake"
   gem.add_development_dependency "libnotify"
   gem.add_development_dependency "rb-inotify"
+  gem.add_development_dependency "webmock"
   gem.add_dependency "time_diff", "~> 0.3.0"
   gem.add_dependency "gcmapper", "~> 0.4.0"
 end
