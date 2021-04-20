@@ -94,8 +94,8 @@ require 'fileutils'
 
     def read_local_datafile
       data = File.open(LOCAL_DATA)
-      difference = Time.diff(data.ctime, Time.now)[:minute]
-      if difference > 2
+      difference = Time.diff(data.ctime, Time.now)[:second] + (Time.diff(data.ctime, Time.now)[:minute] * 60)
+      if difference > 60
         d = create_local_data_file
       else
         d = data.read

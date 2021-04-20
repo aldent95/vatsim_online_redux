@@ -2,6 +2,23 @@
 
 ## Changelog
 
+### v. 2.1.0 - 20 Apr 2021
+
+* Added the new vatsim_regex_callsign method
+* Updated refresh time for data from 3 minutes to 60 seconds
+
+### v. 2.0.1 - 30 Jan 2021
+
+* Updated the code to use the new VATSIM Json data feed
+
+### v. 1.0.1 - 30 Mar 2020
+
+* Small bugfix to the 1.0.0 release
+
+### v. 1.0.0 - 30 Mar 2020
+
+* Updating code to work better with Windows environments
+
 ### v. 0.9.1 - 31 Dec 2016
 
 * Maintenance release, updated dependencies
