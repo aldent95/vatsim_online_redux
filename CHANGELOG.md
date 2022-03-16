@@ -2,6 +2,10 @@
 
 ## Changelog
 
+### v. 2.1.1 - 16 Mar 2022
+
+* Fixing a bug with the time diff on the status and data files
+
 ### v. 2.1.0 - 20 Apr 2021
 
 * Added the new vatsim_regex_callsign method

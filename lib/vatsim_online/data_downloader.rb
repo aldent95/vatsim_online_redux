@@ -44,7 +44,7 @@ require 'fileutils'
 
     def read_status_tempfile
       status = File.open(LOCAL_STATUS)
-      difference = Time.diff(status.ctime, Time.now)[:hour]
+      difference = Time.diff(status.mtime, Time.now)[:hour]
       if difference > 3
         data = create_status_tempfile
       else
@@ -94,7 +94,7 @@ require 'fileutils'
 
     def read_local_datafile
       data = File.open(LOCAL_DATA)
-      difference = Time.diff(data.ctime, Time.now)[:second] + (Time.diff(data.ctime, Time.now)[:minute] * 60)
+      difference = Time.diff(data.mtime, Time.now)[:second] + (Time.diff(data.mtime, Time.now)[:minute] * 60)
       if difference > 60
         d = create_local_data_file
       else
