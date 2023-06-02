@@ -24,7 +24,7 @@ require 'fileutils'
       request = Net::HTTP::Get.new(uri.path)
       http.use_ssl = (uri.scheme == 'https')
       data = http.request(request).body.gsub("\n", '')
-      create_status_backup if File.exists?(LOCAL_STATUS)
+      create_status_backup if File.exist?(LOCAL_STATUS)
       File.write(LOCAL_STATUS, data)
       File.chmod(0777, LOCAL_STATUS)
       dummy_status if data.include? "<html><head>"
@@ -55,7 +55,7 @@ require 'fileutils'
     end
 
     def status_file
-      File.exists?(LOCAL_STATUS) ? read_status_tempfile : create_status_tempfile
+      File.exist?(LOCAL_STATUS) ? read_status_tempfile : create_status_tempfile
       LOCAL_STATUS
     end
 
@@ -71,7 +71,7 @@ require 'fileutils'
       request = Net::HTTP::Get.new(uri.path)
       http.use_ssl = (uri.scheme == 'https')
       req_data = http.request(request).body
-      create_data_backup if File.exists?(LOCAL_DATA)
+      create_data_backup if File.exist?(LOCAL_DATA)
       File.open(LOCAL_DATA, "w+") {|f| f.write(req_data.force_encoding('UTF-8'))}
       File.chmod(0777, LOCAL_DATA)
       gem_data_file if req_data.include? "<html><head>"
@@ -105,7 +105,7 @@ require 'fileutils'
     end
 
     def data_file
-      File.exists?(LOCAL_DATA) ? read_local_datafile : create_local_data_file
+      File.exist?(LOCAL_DATA) ? read_local_datafile : create_local_data_file
       LOCAL_DATA
     end
 

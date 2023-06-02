@@ -2,6 +2,10 @@
 
 ## Changelog
 
+### v. 2.1.2 - 2 June 2023
+
+* Fixed a bug preventing gem from working with Ruby 3.2
+
 ### v. 2.1.1 - 16 Mar 2022
 
 * Fixing a bug with the time diff on the status and data files
